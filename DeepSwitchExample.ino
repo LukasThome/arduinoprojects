@@ -17,10 +17,10 @@ void loop() {
   digitalRead(A3);
   		
   if (digitalRead(A3) == 0){ 				//Se a chave estiver desligada ...
-		digitalWrite(led2, LOW);	
+	digitalWrite(led2, LOW);	
     	digitalWrite(led1, HIGH);	
-  	}else{									//Se estiver ligada ...
-    	digitalWrite(led1, LOW);	
-    	digitalWrite(led2, HIGH);	
-  }
+  		}else{					//Se estiver ligada ...
+    			digitalWrite(led1, LOW);	
+    			digitalWrite(led2, HIGH);	
+  		}
 }
