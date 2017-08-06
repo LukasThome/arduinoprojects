@@ -27,10 +27,10 @@ void loop() {
 
   int numerodepessoas = 0;
   		
-  if (digitalRead(A3)|| digitalRead(A2) || digitalRead(A1) || digitalRead(A0) == 1){ 				//Se todas as chaves estiverem desligadas ...
-		digitalWrite(led1, LOW);	
+  if (digitalRead(A3)|| digitalRead(A2) || digitalRead(A1) || digitalRead(A0) == 1){   //Se todas as chaves estiverem desligadas ...
+	digitalWrite(led1, LOW);	
     	digitalWrite(led2, HIGH);	
-  	}else{									//Se estiverem ligadas ...
+  	}else{									       //Se estiverem ligadas ...
     	digitalWrite(led2, LOW);	
     	digitalWrite(led1, HIGH);	
   }
