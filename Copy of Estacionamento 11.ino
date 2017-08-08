@@ -41,14 +41,14 @@ void setup() {
 
 void loop() {  
 
-  int numerodecarros = 0; //variavel para guardar o numero de carros
+  int numerodecarros = 0;                   //variavel para guardar o numero de carros
  
   //Leitura da chave 1
   if (digitalRead(A3) == 1){
   	digitalWrite(verde1, LOW);
     digitalWrite(vermelho1, HIGH);
      
-  }else{
+    }else{
     digitalWrite(verde1, HIGH);
     digitalWrite(vermelho1, LOW);
     numerodecarros++; 
@@ -58,7 +58,7 @@ void loop() {
   	digitalWrite(verde2, LOW);
     digitalWrite(vermelho2, HIGH);
      
- 	}else{
+ 	  }else{
     digitalWrite(verde2, HIGH);
     digitalWrite(vermelho2, LOW);
     numerodecarros++; 
@@ -85,9 +85,9 @@ void loop() {
    }
   if (numerodecarros == 0){
     lcd.clear();
-    
     lcd.print(" LOTADO");
   	delay(2000);
+   
   }else{
   
   //informações para o lcd  
