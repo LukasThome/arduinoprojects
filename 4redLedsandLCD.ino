@@ -61,8 +61,8 @@ void loop() {
     	digitalWrite(7, LOW);
     	digitalWrite(9, LOW);
     	delay(100);
-  }	
-  if (numerodepessoas < 2){
+  }else{
+	//desliga os 3 leds vermelhos  
     	digitalWrite(6, LOW);
     	digitalWrite(8, LOW);
     	digitalWrite(10,LOW);
