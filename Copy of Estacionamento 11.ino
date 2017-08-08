@@ -71,7 +71,7 @@ void loop() {
   	}else{
     digitalWrite(verde3, HIGH);
     digitalWrite(vermelho3, LOW);
-     numerodecarros++; 
+    numerodecarros++; 
    }
   //leitura da chave 4
    if (digitalRead(A0) == 1){
@@ -81,7 +81,7 @@ void loop() {
   	}else{
     digitalWrite(verde4, HIGH);
     digitalWrite(vermelho4, LOW);
-     numerodecarros++; 
+    numerodecarros++; 
    }
   if (numerodecarros == 0){
     lcd.clear();
@@ -97,5 +97,5 @@ void loop() {
   lcd.print("livre(s)");
   delay(1000);
   lcd.home();  
-}
+  }
 }
