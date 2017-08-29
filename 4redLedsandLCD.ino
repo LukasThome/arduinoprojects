@@ -27,17 +27,21 @@ void setup() {
 
 
 void loop() {  
-
-  int numerodepessoas = 0;
+  
+//contador para o display	
+int numerodepessoas = 0;
   		
-  if (digitalRead(A3)|| digitalRead(A2) || digitalRead(A1) || digitalRead(A0) == 1){   //Se todas as chaves estiverem desligadas ...
+//Se alguma chave for ativada  
+if (digitalRead(A3)|| digitalRead(A2) || digitalRead(A1) || digitalRead(A0) == 1){   
 	digitalWrite(led1, LOW);	
     	digitalWrite(led2, HIGH);	
-  	}else{									       //Se estiverem ligadas ...
+  //Se todas desativadas
+  }else{									      
     	digitalWrite(led2, LOW);	
     	digitalWrite(led1, HIGH);	
   }
   
+  //Parâmetros do contador	
   if (digitalRead(A3) == 1){
     numerodepessoas++;
   }
@@ -52,20 +56,21 @@ void loop() {
   }
   
   if (numerodepessoas >=2){
-    	//leds vermelhos
-    	digitalWrite(6, HIGH);
-    	digitalWrite(8, HIGH);
-    	digitalWrite(10, HIGH);
-    	//leds verdes
-    	digitalWrite(0, LOW);
-    	digitalWrite(7, LOW);
-    	digitalWrite(9, LOW);
-    	delay(100);
-  }else{
-	//desliga os 3 leds vermelhos  
-    	digitalWrite(6, LOW);
-    	digitalWrite(8, LOW);
-    	digitalWrite(10,LOW);
+   //leds vermelhos
+   digitalWrite(6, HIGH);
+   digitalWrite(8, HIGH);
+   digitalWrite(10, HIGH);
+   //leds verdes
+   digitalWrite(0, LOW);
+   digitalWrite(7, LOW);
+   digitalWrite(9, LOW);
+   delay(100);
+  
+ }else{
+  //desliga os 3 leds vermelhos  
+  digitalWrite(6, LOW);
+  digitalWrite(8, LOW);
+  digitalWrite(10,LOW);
   }
   
   //informações para o lcd  
