@@ -29,8 +29,8 @@ void loop(){
     
    }
      
-  if (digitalRead(1) == 1 && estado == 1){
-     while (digitalRead(1) ==1);        
+  if (digitalRead(pinBotao) == 1 && estado == 1){
+     while (digitalRead(pinBotao) ==1);        
      digitalWrite(pinLedVerde, LOW);
      digitalWrite(pinLed, LOW);
      digitalWrite(pinLedAmarelo, HIGH);
@@ -39,8 +39,8 @@ void loop(){
      noTone(buzzer);
 	}
   
-  if (digitalRead(A0) == 1 && estado == 1){
-     while (digitalRead(1) ==1);        
+  if (digitalRead(sensor) == 1 && estado == 1){
+     while (digitalRead(pinBotao) ==1);        
      digitalWrite(pinLedVerde, LOW);
      digitalWrite(pinLed, HIGH);
      digitalWrite(pinLedAmarelo, LOW);
@@ -48,8 +48,8 @@ void loop(){
      estado = 2;
      tone(buzzer,3500);   
   }
-     if (estado == 2 && digitalRead(1) ==1){
-     while (digitalRead(1) ==1);        
+     if (estado == 2 && digitalRead(pinBotao) ==1){
+     while (digitalRead(pinBotao) ==1);        
      digitalWrite(pinLedVerde, LOW);
      digitalWrite(pinLed, LOW);
      digitalWrite(pinLedAmarelo, HIGH);
