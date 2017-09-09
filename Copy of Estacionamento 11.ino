@@ -47,7 +47,6 @@ void loop() {
   if (digitalRead(A3) == 1){
   	digitalWrite(verde1, LOW);
     digitalWrite(vermelho1, HIGH);
-     
     }else{
     digitalWrite(verde1, HIGH);
     digitalWrite(vermelho1, LOW);
@@ -56,8 +55,7 @@ void loop() {
   //leitura da chave 2
   if (digitalRead(A2) == 1){
   	digitalWrite(verde2, LOW);
-    digitalWrite(vermelho2, HIGH);
-     
+    digitalWrite(vermelho2, HIGH); 
  	  }else{
     digitalWrite(verde2, HIGH);
     digitalWrite(vermelho2, LOW);
@@ -67,7 +65,6 @@ void loop() {
    if (digitalRead(A1) == 1){
   	digitalWrite(verde3, LOW);
     digitalWrite(vermelho3, HIGH);
-    
   	}else{
     digitalWrite(verde3, HIGH);
     digitalWrite(vermelho3, LOW);
@@ -77,25 +74,23 @@ void loop() {
    if (digitalRead(A0) == 1){
   	digitalWrite(verde4, LOW);
     digitalWrite(vermelho4, HIGH);
-    
   	}else{
     digitalWrite(verde4, HIGH);
     digitalWrite(vermelho4, LOW);
     numerodecarros++; 
    }
+  
+  //informações para o lcd  
   if (numerodecarros == 0){
     lcd.clear();
     lcd.print(" LOTADO");
   	delay(2000);
-   
-  }else{
-  
-  //informações para o lcd  
-  lcd.print(numerodecarros);
-  lcd.print(" Vaga(s)");
-  lcd.setCursor(0, 1);
-  lcd.print("livre(s)");
-  delay(1000);
-  lcd.home();  
+    }else{ 
+    lcd.print(numerodecarros);
+    lcd.print(" Vaga(s)");
+    lcd.setCursor(0, 1);
+    lcd.print("livre(s)");
+    delay(1000);
+    lcd.home();  
   }
 }
