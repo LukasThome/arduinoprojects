@@ -33,12 +33,13 @@ int numerodepessoas = 0;
   		
 //Se alguma chave for ativada  
 if (digitalRead(A3)|| digitalRead(A2) || digitalRead(A1) || digitalRead(A0) == 1){   
-	digitalWrite(led1, LOW);	
-    	digitalWrite(led2, HIGH);	
-  //Se todas desativadas
+digitalWrite(led1, LOW);	
+digitalWrite(led2, HIGH);	
+  
+//Se todas desativadas
   }else{									      
-    	digitalWrite(led2, LOW);	
-    	digitalWrite(led1, HIGH);	
+  digitalWrite(led2, LOW);	
+  digitalWrite(led1, HIGH);	
   }
   
   //Parâmetros do contador	
@@ -66,12 +67,12 @@ if (digitalRead(A3)|| digitalRead(A2) || digitalRead(A1) || digitalRead(A0) == 1
    digitalWrite(9, LOW);
    delay(100);
   
- }else{
-  //desliga os 3 leds vermelhos  
-  digitalWrite(6, LOW);
-  digitalWrite(8, LOW);
-  digitalWrite(10,LOW);
-  }
+ 	}else{
+  	//desliga os 3 leds vermelhos  
+ 	 digitalWrite(6, LOW);
+  	 digitalWrite(8, LOW);
+  	 digitalWrite(10,LOW);
+  	}
   
   //informações para o lcd  
   lcd.print(numerodepessoas);
